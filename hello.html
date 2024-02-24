@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function fun(){
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var addres = document.getElementById("addres").value;
+            var city = document.getElementById("city").value;
+            var remark = document.getElementById("remark").value;
+            const student = {
+                name:name,
+                phone:phone, 
+                email:email,
+                addres:addres,
+                city:city,
+                remark:remark,
+            }
+            document.getElementById("spn").innerHTML = "hello"+""+name+""+phone+""+email+""+addres+""+city+""+remark;
+            document.getElementById("spn").style.backgroundColor = "green";
+            document.getElementById("spn").style.color = "#fff";
+        }
+    </script>
+</head>
+<body>
+    <table cellpadding="10" cellspacing="0" align="center">
+        <tr>
+            <td>CONTACT DETAIL</td>
+        </tr>
+
+
+    <table cellpadding="10" cellspacing="0" align="center" style="border: 5px solid burlywood;">
+        <tr>
+            <td>name</td>
+            <td><input type="text" id="name"/></td>
+        </tr>
+        <tr>
+            <td>phone no</td>
+            <td><input type="number" id="phone no"/></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input type="text" id="email"/></td>
+        </tr>
+        <tr>
+            <td>addres</td>
+            <td><textarea row="2" cols="30"id="addres"></textarea></td>
+        </tr>
+        <tr>
+            <td>city</td>
+            <td>
+                <select id="city">
+                    <option>--select City--</option>
+                    <option value="delhi">delhi</option>
+                    <option value="up">up</option>
+                    <option value="bihar">bihar</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>remark</td>
+            <td><textarea row="2" cols="30"id="remark"></textarea></td>
+        </tr>
+    
+        <tr>
+            <td colspan="2" style="text-align:center;">
+            <input type="button" name="btn" value="Get Detail" onclick="fun()"/>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <span id="spn"></span>
+        </td>
+        </tr>
+    </table>
+    </table>
+</body>
+</html>
